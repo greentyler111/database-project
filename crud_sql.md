@@ -1,5 +1,5 @@
-###CRUD Statements
-#Create Some New Records
+### CRUD Statements
+# Create Some New Records
 ```
 INSERT INTO Employees
 VALUES (4298, "Andrew Tate", "342-320-4201", "Social Media Influencer", 10);
@@ -15,7 +15,7 @@ VALUES (3198, "2023-03-02", "2024-03-16", 336.0, 4298);
 ```
 
 
-#Read Some Records
+# Read Some Records
 ```
 SELECT * FROM Employees WHERE EmployeeID = 4298;
 
@@ -27,7 +27,7 @@ SELECT * FROM Timesheets WHERE TimesheetID = 3198;
 ```
 
 
-#Update Some Records
+# Update Some Records
 ```
 UPDATE Employees SET JobTitle = 'Prisoner' WHERE id = 4298;
 
@@ -38,7 +38,7 @@ UPDATE Salaries SET SalaryRate = 0.00 WHERE id = 3108;
 UPDATE Timesheets SET HoursWorked = 1000.00 WHERE id = 3198;
 ```
 
-#Delete Some Records
+# Delete Some Records
 ```
 DELETE FROM Timesheets WHERE id = 3198;
 

@@ -1,6 +1,6 @@
-###Database Description
-#Database in 3NF
-#Tables:
+### Database Description
+# Database in 3NF
+# Tables:
 ```
 *Employees* Table with attributes:
 · EmployeeID (Primary Key)
@@ -35,7 +35,7 @@ with foreign key constraint EmployeeID REFERENCES Employees(EmployeeID)
 ```
 
 
-#Functional Dependencies:
+# Functional Dependencies:
 ```
 In *Employees* Table:
 EmployeeID -> Name, PhoneNumber, JobTitle, DepartmentID
@@ -50,7 +50,7 @@ In *Timesheets* Table:
 TimesheetID -> StartDate, EndDate, HoursWorked, EmployeeID
 ```
 
-#Sample Rows of Data From *Employees* Table
+# Sample Rows of Data From *Employees* Table
 ```
 **EmployeeID    Name    PhoneNumber   JobTitle    DepartmentID
 1234    Billy Joel    321-192-1029    Singer    1

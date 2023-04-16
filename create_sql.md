@@ -1,4 +1,4 @@
-*** SQL Statements to Create Tables
+### SQL Statements to Create Tables
 ```
 CREATE TABLE Employees (
   EmployeeID INT NOT NULL,

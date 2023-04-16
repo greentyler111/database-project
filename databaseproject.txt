@@ -1,0 +1,236 @@
+***SQL Statements to Create Tables
+```
+CREATE TABLE Employees (
+  EmployeeID INT NOT NULL,
+  Name CHAR(100) NOT NULL,
+  PhoneNumber CHAR(100),
+  JobTitle CHAR(100),
+  DepartmentID INT,
+  PRIMARY KEY (EmployeeID)
+  FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+)
+
+CREATE TABLE Departments (
+  DepartmentID INT NOT NULL,
+  Name CHAR(100) NOT NULL,
+  Location CHAR(100),
+  ManagerID INT,
+  PRIMARY KEY (DepartmentID)
+  FOREIGN KEY (ManagerID) REFERENCES Employees(EmployeeID)
+)
+
+CREATE TABLE Salaries (
+  SalaryID INT NOT NULL,
+  SalaryRate MONEY NOT NULL,
+  StartDate DATE NOT NULL,
+  EndDate DATE NOT NULL,
+  EmployeeID INT,
+  PRIMARY KEY (SalaryID)
+  FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
+)
+
+CREATE TABLE Timesheets (
+  TimesheetID INT NOT NULL,
+  StartDate DATE NOT NULL,
+  EndDate DATE NOT NULL,
+  HoursWorked FLOAT(53) NOT NULL, 
+  EmployeeID INT,
+  PRIMARY KEY (TimesheetID)
+  FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
+)
+```
+
+
+
+
+###SQL Statements to Populate Tables
+#Employees Table
+```
+INSERT INTO Employees
+VALUES (1234, "Billy Joel", "321-192-1029", "Singer", 1);
+
+INSERT INTO Employees
+VALUES (5678, "Bobby Fischer", "312-210-3109", "Chess Player", 2);
+
+INSERT INTO Employees
+VALUES (9012, "Billy Joel", "321-192-1029", "Singer", 3);
+
+INSERT INTO Employees
+VALUES (3456, "Billy Joel", "321-192-1029", "Singer", 4);
+
+INSERT INTO Employees
+VALUES (7890, "Billy Joel", "321-192-1029", "Singer", 5);
+```
+
+
+#Departments Table
+```
+INSERT INTO Departments
+VALUES (1, "Finance", "Seattle", 1234);
+
+INSERT INTO Departments
+VALUES (2, "Human Resources", "Portland", 5678);
+
+INSERT INTO Departments
+VALUES (3, "Information Technology", "Los Angeles", 9012);
+
+INSERT INTO Departments
+VALUES (4, "Business", "Phoenix", 3456);
+
+INSERT INTO Departments
+VALUES (5, "Marketing", "San Francisco", 7890);
+```
+
+
+#Salaries Table
+```
+INSERT INTO Salaries
+VALUES (1357, 30000.00, "2022-12-02", "2024-12-02", 1234);
+
+INSERT INTO Salaries
+VALUES (2468, 50000.00, "2022-11-02", "2024-11-02", 5678);
+
+INSERT INTO Salaries
+VALUES (3579, 75000.00, "2022-10-02", "2024-10-02", 9012);
+
+INSERT INTO Salaries
+VALUES (4680, 40000.00, "2022-09-02", "2024-09-02", 3456);
+
+INSERT INTO Salaries
+VALUES (5791, 80000.00, "2022-08-02", "2024-08-02", 7890);
+```
+
+
+#Timesheets Table
+```
+INSERT INTO Timesheets
+VALUES (1470, "2023-03-02", "2024-03-16", 80.0, 1234);
+
+INSERT INTO Timesheets
+VALUES (2581, "2023-03-02", "2024-03-16", 80.0, 5678);
+
+INSERT INTO Timesheets
+VALUES (3692, "2023-03-02", "2024-03-16", 80.0, 9012);
+
+INSERT INTO Timesheets
+VALUES (4703, "2023-03-02", "2024-03-16", 80.0, 3456);
+
+INSERT INTO Timesheets
+VALUES (5814, "2023-03-02", "2024-03-16", 80.0, 7890);
+```
+
+
+###CRUD Statements
+#Create Some New Records
+```
+INSERT INTO Employees
+VALUES (4298, "Andrew Tate", "342-320-4201", "Social Media Influencer", 10);
+
+INSERT INTO Departments
+VALUES (10, "Operations", "Bucharest", 4298);
+
+INSERT INTO Salaries
+VALUES (3108, 1000000000.00, "2022-11-02", "2024-11-02", 4298);
+
+INSERT INTO Timesheets
+VALUES (3198, "2023-03-02", "2024-03-16", 336.0, 4298);
+```
+
+
+#Read Some Records
+```
+SELECT * FROM Employees WHERE EmployeeID = 4298;
+
+SELECT * FROM Departments WHERE DepartmentID = 10;
+
+SELECT * FROM Salaries WHERE SalaryID = 3108;
+
+SELECT * FROM Timesheets WHERE TimesheetID = 3198;
+```
+
+
+#Update Some Records
+```
+UPDATE Employees SET JobTitle = 'Prisoner' WHERE id = 4298;
+
+UPDATE Departments SET Location = 'Prison Cell' WHERE id = 10;
+
+UPDATE Salaries SET SalaryRate = 0.00 WHERE id = 3108;
+
+UPDATE Timesheets SET HoursWorked = 1000.00 WHERE id = 3198;
+```
+
+#Delete Some Records
+```
+DELETE FROM Timesheets WHERE id = 3198;
+
+DELETE FROM Salaries WHERE id = 3108;
+
+DELETE FROM Departments WHERE id = 10;
+
+DELETE FROM Employees WHERE id = 4298;
+```
+
+#Github ID: greentyler111
+#Name: Steven Janssen
+#Video Link: 
+
+
+###Database Description
+#Database in 3NF
+#Tables:
+```
+*Employees* Table with attributes:
+· EmployeeID (Primary Key)
+· Name
+· PhoneNumber
+· JobTitle
+· DepartmentID (Foreign Key)
+with foreign key constraint DepartmentID REFERENCES Departments(DepartmentID)
+
+*Departments* Table with attributes:
+· DepartmentID (Primary Key)
+· Name
+· Location
+· ManagerID (Foreign Key)
+with foreign key constraint ManagerID REFERENCES Employees(EmployeeID)
+
+*Salaries* Table with attributes:
+· SalaryID (Primary Key)
+· SalaryRate
+· StartDate
+· EndDate
+· EmployeeID (Foreign Key)
+with foreign key constraint EmployeeID REFERENCES Employees(EmployeeID)
+
+*Timesheets* Table with attributes:
+· TimesheetID (Primary Key)
+· StartDate
+· EndDate
+· HoursWorked
+· EmployeeID (Foreign Key)
+with foreign key constraint EmployeeID REFERENCES Employees(EmployeeID)
+```
+
+
+#Functional Dependencies:
+```
+In *Employees* Table:
+EmployeeID -> Name, PhoneNumber, JobTitle, DepartmentID
+
+In *Departments* Table:
+DepartmentID -> Name, Location, ManagerID
+
+In *Salaries* Table:
+SalaryID -> SalaryRate, StartDate, EndDate, EmployeeID
+
+In *Timesheets* Table:
+TimesheetID -> StartDate, EndDate, HoursWorked, EmployeeID
+```
+
+#Sample Rows of Data From *Employees* Table
+```
+**EmployeeID    Name    PhoneNumber   JobTitle    DepartmentID
+1234    Billy Joel    321-192-1029    Singer    1
+```
+

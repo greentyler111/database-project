@@ -1,5 +1,5 @@
-###SQL Statements to Populate Tables
-#Employees Table
+### SQL Statements to Populate Tables
+# Employees Table
 ```
 INSERT INTO Employees
 VALUES (1234, "Billy Joel", "321-192-1029", "Singer", 1);
@@ -18,7 +18,7 @@ VALUES (7890, "Billy Joel", "321-192-1029", "Singer", 5);
 ```
 
 
-#Departments Table
+# Departments Table
 ```
 INSERT INTO Departments
 VALUES (1, "Finance", "Seattle", 1234);
@@ -37,7 +37,7 @@ VALUES (5, "Marketing", "San Francisco", 7890);
 ```
 
 
-#Salaries Table
+# Salaries Table
 ```
 INSERT INTO Salaries
 VALUES (1357, 30000.00, "2022-12-02", "2024-12-02", 1234);
@@ -56,7 +56,7 @@ VALUES (5791, 80000.00, "2022-08-02", "2024-08-02", 7890);
 ```
 
 
-#Timesheets Table
+# Timesheets Table
 ```
 INSERT INTO Timesheets
 VALUES (1470, "2023-03-02", "2024-03-16", 80.0, 1234);

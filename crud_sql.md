@@ -5,7 +5,7 @@ INSERT INTO Employees
 VALUES (4298, "Andrew Tate", "342-320-4201", "Social Media Influencer", 10);
 
 INSERT INTO Departments
-VALUES (10, "Operations", "Bucharest", 4298);
+VALUES (10, "Operations", "Bucharest", "2022-12-10");
 
 INSERT INTO Salaries
 VALUES (3108, 1000000000.00, "2022-11-02", "2024-11-02", 4298);

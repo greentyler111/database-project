@@ -59,8 +59,7 @@ app.get('/timesheets', (req, res) => {
 });
 
 app.post('/employees', (req, res) => {
-  // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
-  pool.query(req.body, (error, results) => {
+  pool.query(req.body.queryText, (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -69,7 +68,6 @@ app.post('/employees', (req, res) => {
 });
 
 app.post('/departments', (req, res) => {
-  // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
   pool.query(req.body.queryText, (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
@@ -79,8 +77,7 @@ app.post('/departments', (req, res) => {
 });
 
 app.post('/salaries', (req, res) => {
-  // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
-  pool.query(req.body, (error, results) => {
+  pool.query(req.body.queryText, (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -89,8 +86,7 @@ app.post('/salaries', (req, res) => {
 });
 
 app.post('/timesheets', (req, res) => {
-  // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
-  pool.query(req.body, (error, results) => {
+  pool.query(req.body.queryText, (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }

@@ -1,23 +1,4 @@
 ### SQL Statements to Populate Tables
-# Employees Table
-```
-INSERT INTO Employees
-VALUES (1234, "Felix Kjellberg", "321-192-1029", "Youtuber", 1);
-
-INSERT INTO Employees
-VALUES (5678, "Bobby Fischer", "312-210-3109", "Chess Player", 2);
-
-INSERT INTO Employees
-VALUES (9012, "John Fetterman", "328-378-3828", "Senator", 3);
-
-INSERT INTO Employees
-VALUES (3456, "Daniel Keem", "643-349-3929", "News Reporter", 4);
-
-INSERT INTO Employees
-VALUES (7890, "George Miller", "324-492-4920", "Singer", 5);
-```
-
-
 # Departments Table
 ```
 INSERT INTO Departments
@@ -34,6 +15,25 @@ VALUES (4, "Business", "Phoenix", "2006-06-12");
 
 INSERT INTO Departments
 VALUES (5, "Marketing", "San Francisco", "2003-05-29");
+```
+
+
+# Employees Table
+```
+INSERT INTO Employees
+VALUES (1234, "Felix Kjellberg", "321-192-1029", "Youtuber", 1);
+
+INSERT INTO Employees
+VALUES (5678, "Bobby Fischer", "312-210-3109", "Chess Player", 2);
+
+INSERT INTO Employees
+VALUES (9012, "John Fetterman", "328-378-3828", "Senator", 3);
+
+INSERT INTO Employees
+VALUES (3456, "Daniel Keem", "643-349-3929", "News Reporter", 4);
+
+INSERT INTO Employees
+VALUES (7890, "George Miller", "324-492-4920", "Singer", 5);
 ```
 
 

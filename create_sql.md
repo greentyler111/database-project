@@ -37,6 +37,4 @@ CREATE TABLE Timesheets (
   PRIMARY KEY (TimesheetID),
   FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
 );
-ALTER TABLE Employees
-ADD FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID);
 ```

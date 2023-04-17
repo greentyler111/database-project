@@ -23,7 +23,7 @@ const pool = mysql.createPool({
 
 // Define API endpoints
 app.get('/employees', (req, res) => {
-  pool.query('SELECT * FROM employees', (error, results) => {
+  pool.query('SELECT * FROM Employees', (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -32,7 +32,7 @@ app.get('/employees', (req, res) => {
 });
 
 app.get('/departments', (req, res) => {
-  pool.query('SELECT * FROM departments', (error, results) => {
+  pool.query('SELECT * FROM Departments', (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -41,7 +41,7 @@ app.get('/departments', (req, res) => {
 });
 
 app.get('/salaries', (req, res) => {
-  pool.query('SELECT * FROM salaries', (error, results) => {
+  pool.query('SELECT * FROM Salaries', (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -50,7 +50,7 @@ app.get('/salaries', (req, res) => {
 });
 
 app.get('/timesheets', (req, res) => {
-  pool.query('SELECT * FROM timesheets', (error, results) => {
+  pool.query('SELECT * FROM Timesheets', (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -59,7 +59,6 @@ app.get('/timesheets', (req, res) => {
 });
 
 app.post('/employees', (req, res) => {
-  console.log("Lol")
   // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
   pool.query(req.body, (error, results) => {
     if (error) {
@@ -70,9 +69,8 @@ app.post('/employees', (req, res) => {
 });
 
 app.post('/departments', (req, res) => {
-  console.log("Lol")
   // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
-  pool.query(req.body, (error, results) => {
+  pool.query(req.body.queryText, (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -81,7 +79,6 @@ app.post('/departments', (req, res) => {
 });
 
 app.post('/salaries', (req, res) => {
-  console.log("Lol")
   // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
   pool.query(req.body, (error, results) => {
     if (error) {
@@ -92,7 +89,6 @@ app.post('/salaries', (req, res) => {
 });
 
 app.post('/timesheets', (req, res) => {
-  console.log("Lol")
   // const { first_name, last_name, email, phone_number, hire_date, job_title, department_id } = req.body;
   pool.query(req.body, (error, results) => {
     if (error) {
@@ -103,7 +99,7 @@ app.post('/timesheets', (req, res) => {
 });
 
 // Start the server
-const PORT = 3000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

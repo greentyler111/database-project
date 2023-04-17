@@ -49,7 +49,11 @@ button {
 
 .queryBlock {
   display: block;
-  width: 450px;
+  width: 660px;
+  max-width: 660px;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
   background-color: #ddd;
   border-radius: 10px;
   padding: 10px;

@@ -2,6 +2,12 @@
 # Database in 3NF
 # Tables:
 ```
+*Departments* Table with attributes:
+· DepartmentID (Primary Key)
+· Name
+· Location
+· CreationDate
+
 *Employees* Table with attributes:
 · EmployeeID (Primary Key)
 · Name
@@ -9,13 +15,6 @@
 · JobTitle
 · DepartmentID (Foreign Key)
 with foreign key constraint DepartmentID REFERENCES Departments(DepartmentID)
-
-*Departments* Table with attributes:
-· DepartmentID (Primary Key)
-· Name
-· Location
-· ManagerID (Foreign Key)
-with foreign key constraint ManagerID REFERENCES Employees(EmployeeID)
 
 *Salaries* Table with attributes:
 · SalaryID (Primary Key)

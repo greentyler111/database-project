@@ -21,19 +21,19 @@ VALUES (7890, "George Miller", "324-492-4920", "Singer", 5);
 # Departments Table
 ```
 INSERT INTO Departments
-VALUES (1, "Finance", "Seattle", 1234);
+VALUES (1, "Finance", "Seattle", "1999-02-19");
 
 INSERT INTO Departments
-VALUES (2, "Human Resources", "Portland", 5678);
+VALUES (2, "Human Resources", "Portland", "2009-03-12");
 
 INSERT INTO Departments
-VALUES (3, "Information Technology", "Los Angeles", 9012);
+VALUES (3, "Information Technology", "Los Angeles", "2014-02-20");
 
 INSERT INTO Departments
-VALUES (4, "Business", "Phoenix", 3456);
+VALUES (4, "Business", "Phoenix", "2006-06-12");
 
 INSERT INTO Departments
-VALUES (5, "Marketing", "San Francisco", 7890);
+VALUES (5, "Marketing", "San Francisco", "2003-05-29");
 ```
 
 

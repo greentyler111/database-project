@@ -1,5 +1,13 @@
 ### SQL Statements to Create Tables
 ```
+CREATE TABLE Departments (
+  DepartmentID INT NOT NULL,
+  Name CHAR(100) NOT NULL,
+  Location CHAR(100),
+  CreationDate DATE NOT NULL,
+  PRIMARY KEY (DepartmentID)
+);
+
 CREATE TABLE Employees (
   EmployeeID INT NOT NULL,
   Name CHAR(100) NOT NULL,
@@ -8,15 +16,6 @@ CREATE TABLE Employees (
   DepartmentID INT,
   PRIMARY KEY (EmployeeID),
   FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
-);
-
-CREATE TABLE Departments (
-  DepartmentID INT NOT NULL,
-  Name CHAR(100) NOT NULL,
-  Location CHAR(100),
-  ManagerID INT,
-  PRIMARY KEY (DepartmentID),
-  FOREIGN KEY (ManagerID) REFERENCES Employees(EmployeeID)
 );
 
 CREATE TABLE Salaries (

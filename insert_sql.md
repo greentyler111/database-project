@@ -2,19 +2,19 @@
 # Employees Table
 ```
 INSERT INTO Employees
-VALUES (1234, "Billy Joel", "321-192-1029", "Singer", 1);
+VALUES (1234, "Felix Kjellberg", "321-192-1029", "Youtuber", 1);
 
 INSERT INTO Employees
 VALUES (5678, "Bobby Fischer", "312-210-3109", "Chess Player", 2);
 
 INSERT INTO Employees
-VALUES (9012, "Billy Joel", "321-192-1029", "Singer", 3);
+VALUES (9012, "John Fetterman", "328-378-3828", "Senator", 3);
 
 INSERT INTO Employees
-VALUES (3456, "Billy Joel", "321-192-1029", "Singer", 4);
+VALUES (3456, "Daniel Keem", "643-349-3929", "News Reporter", 4);
 
 INSERT INTO Employees
-VALUES (7890, "Billy Joel", "321-192-1029", "Singer", 5);
+VALUES (7890, "George Miller", "324-492-4920", "Singer", 5);
 ```
 
 

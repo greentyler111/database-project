@@ -36,11 +36,11 @@ with foreign key constraint EmployeeID REFERENCES Employees(EmployeeID)
 
 # Functional Dependencies:
 ```
+In *Departments* Table:
+DepartmentID -> Name, Location, CreationDate
+
 In *Employees* Table:
 EmployeeID -> Name, PhoneNumber, JobTitle, DepartmentID
-
-In *Departments* Table:
-DepartmentID -> Name, Location, ManagerID
 
 In *Salaries* Table:
 SalaryID -> SalaryRate, StartDate, EndDate, EmployeeID
@@ -51,6 +51,7 @@ TimesheetID -> StartDate, EndDate, HoursWorked, EmployeeID
 
 # Sample Rows of Data From *Employees* Table
 ```
-**EmployeeID    Name    PhoneNumber   JobTitle    DepartmentID
-1234    Billy Joel    321-192-1029    Singer    1
+EmployeeID    Name               PhoneNumber     JobTitle       DepartmentID
+1234          Felix Kjellberg    321-192-1029    Youtuber       1
+5678          Bobby Fischer      312-210-3109    Chess Player   2
 ```
